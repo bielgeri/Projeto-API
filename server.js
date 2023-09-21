@@ -1,6 +1,6 @@
 import app from './app';
+import './src/database/migrations/20230921115248-alunos';
 import './src/database/index';
-import './src/models/20230920111959-alunos;
 
 const port = 3001;
 
