@@ -3,7 +3,6 @@ import Aluno from '../models/Aluno';
 class HomeController {
   async index(req, res) {
     const novoAluno = await Aluno.create({
-      id: 2,
       nome: 'Luiz',
       sobrenome: 'Polido',
       email: 'luizsafado@gmail.com',
