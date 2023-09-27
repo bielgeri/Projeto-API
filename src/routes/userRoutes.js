@@ -12,5 +12,5 @@ export default router;
   store/create -> cria um novo usario -> POST
   delete -> apaga um usuario -> DELETE
   show -> mostra um usuario -> GET
-  update -> atualiza um usario -> PATCH ou PUT
+  update -> atualiza um usuario -> PATCH ou PUT
 */

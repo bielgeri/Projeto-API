@@ -1,5 +1,5 @@
 import Sequelize, { Model } from 'sequelize';
-import bcrypt from 'bcryptjs';
+import bcryptjs from 'bcryptjs';
 
 export default class User extends Model {
   static init(sequelize) {
@@ -17,6 +17,9 @@ export default class User extends Model {
       email: {
         type: Sequelize.STRING,
         defaultValue: '',
+        unique: {
+          msg: 'Email já existe',
+        },
         validate: {
           isEmail: {
             msg: 'Email inválido',
@@ -42,7 +45,7 @@ export default class User extends Model {
     });
 
     this.addHook('beforeSave', async (user) => {
-      user.password_hash = await bcrypt.hash(user.password, 8);
+      user.password_hash = await bcryptjs.hash(user.password, 8);
     });
 
     return this;
