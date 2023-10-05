@@ -29,5 +29,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'consistent-return': 'off',
     'no-unused-vars': 'off',
+    'no-empty-function': 'off',
   },
 };
