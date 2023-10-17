@@ -30,5 +30,6 @@ module.exports = {
     'consistent-return': 'off',
     'no-unused-vars': 'off',
     'no-empty-function': 'off',
+    camelcase: 'off',
   },
 };
