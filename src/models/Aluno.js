@@ -40,7 +40,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'Idade precisa ser um numero inteirou',
+            msg: 'Idade precisa ser um numero inteiro',
           },
         },
       },
@@ -49,7 +49,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'Peso precisa ser um numero inteirou ou de ponto flutuante',
+            msg: 'Peso precisa ser um numero inteiro ou de ponto flutuante',
           },
         },
       },
@@ -58,7 +58,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'Altura precisa ser um numero inteirou ou de ponto flutuante',
+            msg: 'Altura precisa ser um numero inteiro ou de ponto flutuante',
           },
         },
       },
@@ -66,5 +66,9 @@ export default class Aluno extends Model {
       sequelize,
     });
     return this;
+  }
+
+  static associate(models) {
+    this.hasMany(models.Foto, { foreignKey: 'aluno_id' });
   }
 }
