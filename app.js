@@ -6,6 +6,8 @@ dotenv.config();
 import './src/database';
 
 import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
 
 import homeRoutes from './src/routes/homeRoutes';
 import userRoutes from './src/routes/userRoutes';
